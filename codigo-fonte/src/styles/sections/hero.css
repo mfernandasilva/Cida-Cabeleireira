@@ -95,7 +95,7 @@
   top: 50%;
   width: 750px;
   height: 750px;
-  border: 1px dashed var(--color-brand);
+  border: 2px dashed var(--color-brand);
   border-radius: 50%;
   opacity: 0.12;
   z-index: 2;
@@ -109,9 +109,10 @@
   to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/* --- MOBILE E TABLET --- */
+/* Responsivo */
 @media (max-width: 900px) {
   .hero {
+    margin-top: -28px;
     flex-direction: column;
     height: auto;
     min-height: 120vh;
@@ -127,18 +128,18 @@
   .hero-content-container {
     height: auto;
     padding: 50px 20px 80px;
-    margin-top: -30px; /* Sobrepõe levemente o degradê da imagem */
+    margin-top: -30px;
   }
 
   .hero-title {
     margin-top: -100px;
-    font-size: 80px; /* Ajuste para não quebrar linha bruscamente */
+    font-size: 80px; 
     letter-spacing: -2px;
   }
 
   .hero-title-secondary {
     font-size: 34px;
-    transform: rotate(0deg); /* Melhor leitura no mobile */
+    transform: rotate(0deg);
   }
 
   .hero-rotating-circle {

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { handleWhatsappClick } from "../utils/whatsapp"; 
 
 export default function Hero() {
   return (
@@ -25,9 +26,13 @@ export default function Hero() {
           <h2 className="hero-title-secondary">
             que transforma sua presença
           </h2>
-          <a href="#agendamento" className="hero-button-ghost">
+          
+          <button 
+            className="hero-button-ghost"
+            onClick={() => handleWhatsappClick("Olá Cida! Gostaria de agendar um atendimento.")}
+          >
             Agendar atendimento
-          </a>
+          </button>
         </div>
       </div>
     </section>
