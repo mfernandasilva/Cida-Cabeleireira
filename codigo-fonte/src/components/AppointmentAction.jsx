@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { handleWhatsappClick } from "../utils/whatsapp"; 
 
 export default function AppointmentAction() {
   const column1 = [
@@ -10,7 +11,7 @@ export default function AppointmentAction() {
 
   const column2 = [
     "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=400&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1595476108010-b4d1f80d91f1?q=80&w=400&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=400&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=400&auto=format&fit=crop"
   ];
 
@@ -24,7 +25,7 @@ export default function AppointmentAction() {
             <p className="cta-description">
               Sua beleza merece um momento dedicado. Escolha o melhor horário para você e deixe nossa equipe cuidar de cada detalhe.
             </p>
-            <button className="cta-button">
+            <button className="cta-button"   onClick={() => handleWhatsappClick("Olá Cida! Gostaria de agendar um atendimento. Qual sua disponibilidade? ")}>
               Agendar Atendimento
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
             </button>
