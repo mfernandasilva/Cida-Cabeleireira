@@ -1,0 +1,61 @@
+.header {
+  width: 100%;
+  background-color: var(--color-background);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+ /* border-bottom: 1px solid var(--color-border); */
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--color-brand);
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-title);
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-brand);
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .navbar {
+    padding: 16px;
+    height: 70px;
+  }
+  .logo {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .btn-primary {
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+}

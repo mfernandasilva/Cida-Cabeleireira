@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-title);
+}
+
+h1, h2, h3 {
+  color: var(--color-title);
+}
+
+p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+}

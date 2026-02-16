@@ -1,0 +1,21 @@
+:root {
+  /* Cores principais */
+  --color-background: #F6F4EE;
+  --color-brand: #737144;
+  --color-brand-hover: #8A8652;
+
+  --color-title: #1E1E1E;
+  --color-text-secondary: #6B6B6B;
+
+  --color-white: #FFFFFF;
+  --color-border: #E5E5E5;
+
+  /* Espaçamento */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* Border */
+  --radius-md: 8px;
+}
