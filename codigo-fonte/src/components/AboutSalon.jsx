@@ -3,31 +3,51 @@ import Image from "next/image";
 
 export default function AboutSalon() {
   const features = [
-    "Profissionais com anos de experiência",
-    "Produtos de Alta Qualidade",
-    "Atendimento personalizado e exclusivo",
-    "Ambiente sofisticado e acolhedor"
+    { p1: "Profissionais com", p2: "Anos de Experiência" },
+    { p1: "Produtos de", p2: "Alta Qualidade" },
+    { p1: "Atendimento exclusivo", p2: "e Personalizado" },
+    { p1: "Ambiente acolhedor", p2: "e Sofisticado" }
   ];
 
   return (
     <section className="about" id="sobre">
-        <div className="about-blur blur-1"></div>
-        <div className="about-blur blur-2"></div>
-        <div className="about-blur blur-3"></div>
+      <div className="about-blur blur-1"></div>
+      <div className="about-blur blur-2"></div>
+      
       <div className="about-container">
         
+        {/* Lado Visual - Grid Editorial */}
         <div className="about-visual">
           <div className="grid-item item-1">
-            <Image src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600" alt="Interior do Salão" fill style={{ objectFit: "cover" }} />
+            <Image 
+              src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800" 
+              alt="Interior do Salão" 
+              fill 
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{ objectFit: "cover" }} 
+            />
           </div>
           <div className="grid-item item-2">
-            <Image src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600" alt="Procedimento" fill style={{ objectFit: "cover" }} />
+            <Image 
+              src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600" 
+              alt="Procedimento" 
+              fill 
+              sizes="(max-width: 768px) 50vw, 30vw"
+              style={{ objectFit: "cover" }} 
+            />
           </div>
           <div className="grid-item item-3">
-            <Image src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=600" alt="Detalhe Decoração" fill style={{ objectFit: "cover" }} />
+            <Image 
+              src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=600" 
+              alt="Detalhe Decoração" 
+              fill 
+              sizes="(max-width: 768px) 50vw, 30vw"
+              style={{ objectFit: "cover" }} 
+            />
           </div>
         </div>
 
+        {/* Lado Conteúdo */}
         <div className="about-content">
           <span className="about-overline">Nossa História</span>
           <h2 className="about-title">Mais de <span>25 anos</span> elevando o conceito de beleza</h2>
@@ -41,8 +61,12 @@ export default function AboutSalon() {
           <ul className="about-list">
             {features.map((item, index) => (
               <li key={index}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                {item}
+                <div className="icon-wrapper">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span>
+                  {item.p1} <br /> <strong>{item.p2}</strong>
+                </span>
               </li>
             ))}
           </ul>
