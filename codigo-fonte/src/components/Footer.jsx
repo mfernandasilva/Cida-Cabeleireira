@@ -8,7 +8,6 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         
-        {/* Coluna 1: Branding */}
         <div className="footer-brand">
           <h2 className="footer-logo">CIDA<span>Cabeleireira</span></h2>
           <p className="footer-bio">
@@ -25,7 +24,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Coluna 2: Navegação */}
         <div className="footer-links">
           <h3>Navegação</h3>
           <ul>
@@ -36,7 +34,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Coluna 3: Especialidades */}
         <div className="footer-links">
           <h3>Especialidades</h3>
           <ul>
@@ -47,7 +44,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Coluna 4: Contato Direto */}
         <div className="footer-contact-cta">
           <h3>Atendimento</h3>
           <p>Dúvidas ou agendamentos? Fale conosco agora mesmo.</p>

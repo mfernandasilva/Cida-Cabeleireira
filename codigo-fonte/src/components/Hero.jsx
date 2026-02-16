@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="hero-blur blur-1"></div>
       <div className="hero-blur blur-2"></div>
 
       <div className="hero-image-container">
         <Image
-          src="/hero-image.png"
+          src="/background-hero.png"
           alt="Beleza"
           fill
           priority

@@ -10,7 +10,7 @@ export default function AboutSalon() {
   ];
 
   return (
-    <section className="about">
+    <section className="about" id="sobre">
         <div className="about-blur blur-1"></div>
         <div className="about-blur blur-2"></div>
         <div className="about-blur blur-3"></div>

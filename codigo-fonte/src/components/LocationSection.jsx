@@ -8,7 +8,7 @@ export default function LocationSection() {
   ];
 
   return (
-    <section className="location">
+    <section className="location" id="contato">
       <div className="location-container">
         
         <div className="location-info">

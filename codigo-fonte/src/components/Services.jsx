@@ -83,7 +83,7 @@ export default function Services() {
   };
 
   return (
-    <section className="services">
+    <section className="services" id="services">
       <div className="services-header">
         <div className="services-title-wrapper">
           <span className="services-overline">Nossas Especialidades</span>
