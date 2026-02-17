@@ -40,7 +40,7 @@ export default function Footer() {
           <ul className="footer-contact-list">
             <li>
                <small>WhatsApp</small>
-               <Link href="https://wa.me/5581999999999">(81) 98684-8017</Link>
+               <span>(81) 98684-8017</span>
             </li>
             <li>
                <small>Telefone Fixo</small>
@@ -64,7 +64,7 @@ export default function Footer() {
         <div className="footer-bottom-content">
           <p>&copy; {currentYear} Cida Cabeleireira. Todos os direitos reservados.</p>
           <div className="footer-legal">
-            <span>Desenvolvido por Maria Fernanda</span>
+            <Link href="https://mariafernandadev.vercel.app/"> <span> Desenvolvido por Maria Fernanda </span> </Link>
           </div>
         </div>
       </div>
