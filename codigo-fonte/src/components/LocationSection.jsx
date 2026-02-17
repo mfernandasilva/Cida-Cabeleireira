@@ -1,21 +1,26 @@
 "use client";
-import React from "react";
+import React, { useSyncExternalStore } from "react";
+
+const subscribe = () => () => {};
+const useIsClient = () => useSyncExternalStore(subscribe, () => true, () => false);
 
 export default function LocationSection() {
+  const isClient = useIsClient();
+
   const schedule = [
     { day: "Segunda a Sexta", hours: "09:00 — 19:00" },
     { day: "Sábado", hours: "09:00 — 19:00" },
     { day: "Domingo", hours: "Fechado" },
   ];
 
-  // Lógica funcional de status
-  const checkStatus = () => {
-    if (typeof window === "undefined") return { text: "Carregando...", class: "closed" };
+  const getStatus = () => {
+    if (!isClient) return { text: "Verificando...", class: "closed" };
+
     const agora = new Date();
     const diaSemana = agora.getDay();
     const hora = agora.getHours();
 
-    if (diaSemana >= 1 && diaSemana <= 6) { // Seg a Sáb
+    if (diaSemana >= 1 && diaSemana <= 6) {
       if (hora >= 9 && hora < 19) {
         return { text: "Aberto agora", class: "open" };
       }
@@ -23,7 +28,7 @@ export default function LocationSection() {
     return { text: "Fechado agora", class: "closed" };
   };
 
-  const status = checkStatus();
+  const status = getStatus();
 
   const handleDirections = () => {
     const address = encodeURIComponent("Rua Bom Pastor, 430 - Iputinga, Recife - PE");
@@ -32,7 +37,6 @@ export default function LocationSection() {
 
   return (
     <section className="location" id="contato">
-      {/* Wrapper da Borda Animada */}
       <div className="location-border-wrapper">
         <div className="location-container">
           
@@ -71,7 +75,7 @@ export default function LocationSection() {
 
           <div className="location-map-wrapper">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.553472304958!2d-34.9317582!3d-8.0450543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1966037089b1%3A0x6734749f50e70e28!2sR.%20Bom%20Pastor%2C%20430%20-%20Iputinga%2C%20Recife%20-%20PE%2C%2050670-430!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.563456789012!2d-34.928821!3d-8.044154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19665e31d7e3%3A0x67c06208990c8f5!2sR.%20Bom%20Pastor%2C%20430%20-%20Iputinga%2C%20Recife%20-%20PE!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
